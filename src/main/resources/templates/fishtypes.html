@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link th:href="@{style.css}" rel="stylesheet"/>
+    <title>fishtypes</title>
+</head>
+<body class="body">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Your Fishing Diary</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/diarypage}">Diary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/catchpage}">New Catch</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/about}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="text-center text1">
+<h1 class="text-uppercase font-weight-bold">Fish Types</h1>
+<h2>There are many different types of fish that you can target</h2>
+</div>
+<div class="text-center text1">
+<p>Bass: The most famous of a all of game fish but somtimes the hardest to target. You will have to learn how to follow their bedding patterns to sucessfully catch the big one!</p>
+<p>Walleye: Another great catch in many lakes! They like deep spots near rocks so be sure to check your depth finder if you are looking for these monsters!
+</p>
+<p>Northerns: Tough fighters but can be caught with most baits as they are very aggressive and territorial. They put up a fun fight but beware of the teeth! </p>
+<p>Pan-Fish: Sunnies and crappies are easier to catch! They will bit at anything you put in front of them but if you want to catch a good sized one you will have to find the right spot and the right lure.</p>
+<p>Cat-fish: Bottom feeders and very heavy, hard fighters so make sure you have the proper line weight that is needed for the size of cat-fish that youa re going for.</p>
+</div>
+</body>
+</html>

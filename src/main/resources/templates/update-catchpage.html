@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link th:href="@{/style.css}" rel="stylesheet"/>
+    <title>Update catchpage</title>
+</head>
+<body class="body">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Your Fishing Diary</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/catchpage}">New Catch</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/fishtypes}">Fish Types</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/about}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="mask d-flex align-items-center h-100 gradient-custom-3 catchtext">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card-1" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <form th:action="@{/catch/{id} (id=${catch.id})}" method="POST" th:object="${catch}">
+                            <box class="catch"><h1>Update Your Catch Here</h1></box>
+                            <p>Gear</p>
+                            <div class="mb-3 text-center">
+                                <div><label for="StringWeight">String Weight</label></div>
+                                <div><input type="text" th:field="*{stringWeight}" name="StringWeight" id="StringWeight"
+                                            required/></div>
+                            </div>
+                            <!--<div class="input-group1">
+                              <div><label for="PoleType">Pole Type</label></div>
+                              <div><input type="text" th:field="*{poleType}" name="PoleType" id="PoleType" /></div>
+                            </div>-->
+                            <div class="text-center">
+                                <div><label for="PoleType">Pole-Type</label></div>
+                                <select name="PoleType" id="poletype" th:field="*{poleType}" required>
+                                    <option value="" selected>[Select One]</option>
+                                    <option value="Heavy">Heavy</option>
+                                    <option value="Heavy-Medium">Heavy-Medium</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Medium-Light">Medium-Light</option>
+                                    <option value="Light">Light</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <div><label for="Bait">Bait</label></div>
+                                <div><input type="text" th:field="*{bait}" name="Bait" id="Bait" required/></div>
+                            </div>
+                            <p>
+                                Fish
+                            </p>
+                            <div class="mb-3 text-center">
+                                <div><label for="FishSpecies">Fish Species</label></div>
+                                <div><input type="text" th:field="*{fishSpecies}" name="FishSpecies" id="FishSpecies"
+                                            required/></div>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <div><label for="Weight">Weight</label></div>
+                                <div><input type="text" th:field="*{weight}" name="Weight" id="Weight" required/></div>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <div><label for="Length">Length</label></div>
+                                <div><input type="text" th:field="*{length}" name="Length" id="Length" required/></div>
+                            </div>
+                            <p>
+                                Body of Water
+                            </p>
+                            <div class="mb-3 text-center">
+                                <div><label for="BodyofWater">Body of Water</label></div>
+                                <div><input type="text" th:field="*{bow}" name="BodyofWater" id="BodyofWater" required/>
+                                </div>
+                            </div>
+                            <p>Weather</p>
+                            <div class="text-center">
+                                <div><label for="Weather">Weather</label></div>
+                                <select name="Weather" id="weather" th:field="*{weather}" required>
+                                    <option value="" selected>[Select One]</option>
+                                    <option value="Sunny">Sunny</option>
+                                    <option value="PartlyCloudy">Partly Cloudy</option>
+                                    <option value="Cloudy">Cloudy</option>
+                                    <option value="Rain">Rain</option>
+                                </select>
+                            </div>
+                            <input type="submit" name="" value="Update Catch">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

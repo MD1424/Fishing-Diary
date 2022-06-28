@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link th:href="@{style.css}" rel="stylesheet"/>
+    <title>Login-page</title>
+
+  </head>
+  <body class="body">
+  <h1 class="text-center text-uppercase font-weight-bold title text-uppercase"> Your Fishing Diary</h1>
+    <form class="box" th:action="@{/login}" method="POST">
+      <h2>Login</h2>
+      <input type="text" name="username" placeholder="Enter E-mail" id="username" />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter Password"
+        id="password"
+      />
+      <input type="submit" name="" value="Login">
+      <!--<a th:href="@{/catchpage.html}"></a>-->
+      <a th:href="@{/registration}">Don't have an account? Sign-up Here</a>
+    </form>
+  </body>
+</html>

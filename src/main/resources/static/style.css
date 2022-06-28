@@ -1,0 +1,154 @@
+
+
+.body{
+    margin:0 ;
+    padding: 0;
+    font-family: sans-serif;
+    background: url('/images/loginpagebackground.jpg');
+    background-size: cover;
+}
+.box{
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: black;
+    text-align: center;
+}
+.title{
+    font-size: xxx-large;
+    color:darkgreen;
+    background: black;
+}
+.box h2{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box input[type="text"],.box input[type="password"],.mb-3 input[type="text"],.mb-3 input[type="password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid green;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: blue;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus,.mb-3 input[type="text"]:focus,.mb-3 input[type="password"]:focus{
+    width: 270px;
+    border-color: aqua;
+}
+.box input[type="submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid green;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+    background: green;
+}
+.input-group input,
+      .input-group textarea,
+      .input-group select {
+        padding: 10px;
+        border: solid 1px #999;
+        border-radius: 2px;
+        width: 100%;
+      }
+.h1diary{
+    font-family: Helvetica;
+    color: rgba(93, 215, 241);
+
+    font-size: xxx-large;
+}
+.h2diary{
+    color: rgba(93, 215, 241);
+
+}
+#diary {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#diary td, #diary th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#diary tr:nth-child(even){background-color: #f2f2f2;}
+
+#diary tr:hover {background-color: #ddd;}
+
+#diary th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+.updatebutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.deletebutton {
+    background-color: red;
+    border: none;
+    color: White;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#fishtable{
+    background: white;
+}
+.welcome{
+    font-family: fantasy;
+    color: #4CAF50;
+
+}
+.yourinfo{
+    color: #4CAF50;
+}
+.card{
+    background: black;
+}
+.card-1{
+    background: lightyellow;
+}
+.form-label{
+    align-content: center;
+    font-family: fantasy;
+    font-size: large;
+    color: red;
+}
+.catchtext{
+    color: black;
+}
+.text1{
+    background: darkgreen;
+    color:white;
+}

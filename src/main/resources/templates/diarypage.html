@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>diarypage</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link th:href="@{style.css}" rel="stylesheet"/>
+</head>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Your Fishing Diary</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/catchpage}">New Catch</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/fishtypes}">Fish Types</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/about}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<body class="body">
+
+<h1 class="text-center text-uppercase font-weight-bold h1diary">Diary</h1>
+<h2 class="text-uppercase font-weight-bold h2diary">Your Catches</h2>
+<table id = "diary">
+    <thead class = "">
+    <tr>
+        <th colspan="3">Fish</th>
+        <th colspan="3">Gear</th>
+    </tr>
+    <tr>
+        <th>Fish Species</th>
+        <th>Weight</th>
+        <th>Length</th>
+        <th>String Weight</th>
+        <th>Pole Type</th>
+        <th>Bait</th>
+        <th>Body of Water</th>
+        <th>Weather</th>
+    </tr>
+    </thead>
+    <tbody id="fishtable">
+    <tr th:each = "catch: ${catches}">
+        <td th:text = "${catch.fs.fishSpecies}"></td>
+        <td th:text = "${catch.fs.weight}"></td>
+        <td th:text = "${catch.fs.length}"></td>
+        <td th:text = "${catch.gear.stringWeight}"></td>
+        <td th:text = "${catch.gear.poleType}"></td>
+        <td th:text = "${catch.gear.bait}"></td>
+        <td th:text = "${catch.bow.BOW}"></td>
+        <td th:text = "${catch.weather.weatherType}"></td>
+        <td>
+            <a th:href = "@{/catch/edit/{id}(id=${catch.id})}"
+               class = "updatebutton">Update</a>
+            <a th:href = "@{/catch/{id}(id=${catch.id})}"
+               class = "deletebutton">Delete</a>
+        </td>
+
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

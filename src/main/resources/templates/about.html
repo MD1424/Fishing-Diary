@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link th:href="@{style.css}" rel="stylesheet"/>
+    <title>about</title>
+</head>
+<body class="body">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Your Fishing Diary</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/diarypage}">Diary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/catchpage}">New Catch</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/fishtypes}">Fish Types</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/about}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1 class="text-center text-uppercase font-weight-bold">About Fishing Diaries!</h1>
+<div class="text1 text-center">
+<p>We here at Fishing Diaries have a passion for fishing and wanted to be able to log and
+    track these catches to better learn from their patterns (or just show off!).</p>
+</div>
+<div class="text1 text-center">
+<p>If you have any questions</p>
+<p>We are always glad to hear from you!</p>
+<p>
+    <a href="mailto:example@fishingdiary.com?subject=Interested%20in%20help/donate"
+    >Send us an email</a
+    >
+    and let us help to improve our website.
+</p>
+<h2>Help or Donate</h2>
+<p>
+    If you would like to help or donate please put in your email and we
+    will contact you!
+</p>
+<div class="helpline">
+    <form id="emailcheck"><label for="email">Email</label>
+</div>
+<div><input  type="text" name="email" id="email"/>
+    <input class="btn-primary"
+            type="submit"
+            value="Send E-mail"
+
+    />
+    </form>
+</div>
+</div>
+
+</body>
+</html>
